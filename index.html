@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syeda Soha Moiz Fatima!</title>
+
+  <!-- This script pulls in Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- These are for the animations and photo gallery -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" />
+
+  <!-- Google Fonts for the Anime look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Link to your new external CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- IMPORTANT: Replace with a real image link after you upload it -->
+  <meta property="og:image" content="https://placehold.co/1200x630/87CEEB/FFFFFF?text=A+Surprise+For+[Name]">
+</head>
+<body>
+<!-- Canvas for the falling cherry blossoms -->
+<canvas id="sakura-canvas"></canvas>
+
+<!-- Section 1: Hero Welcome -->
+<header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
+  <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+    <source src="img/sa.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="absolute inset-0 bg-black bg-opacity-90"></div>
+
+  <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
+    <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">Happy Birthday, Syeda Soha Moiz Fatima!!💐🥳🎂</h1>
+    <p class="mt-4 text-xl font-semibold">Celebrating a wonderful journey of... </p>
+    
+    <div id="countdown" class="mt-6 text-2xl font-semibold tracking-widest leading-relaxed"></div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto p-6 md:p-12">
+
+  <!-- Section 2: A Letter For You -->
+  <section class="my-16 md:my-24 max-w-3xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-anime text-sakura mb-8 drop-shadow-sm">A Special Message For You from a capable person</h2>
+    <div class="text-left text-lg leading-relaxed space-y-4 bg-white p-8 rounded-lg shadow-lg">
+      <!-- TODO: Write your personal letter here -->
+      <p>Assalamualaikum 057,</p>
+      <p>Happy Birthday, Sohaaa. 🌻❤️ I honestly don't think words will ever be enough to explain how special you are to me, but since long messages are your thing, I guess I'll try my best today. 🥹❤️‍🩹 You know, there are people who enter our lives and become a part of our routine, and then there are people who somehow become a part of our hearts without us even realizing when it happened. And you're one of those rare people for me. Somewhere between our endless arguments, your dramatic reactions, my stupid attempts to annoy you, our late-night conversations, and all those little moments that might seem ordinary to anyone else, you became someone whose presence genuinely matters to me. I don't think you realize how beautiful you are as a person, not just in the way you smile or laugh, but in the way you care, the way you listen, the way you remember little things, and the way you try to understand people even when their own minds are a mess. I've seen your confused side, your stubborn side, your overthinking side, your unpredictable side, and that side of you which pretends to be all tough but still has so much softness hidden underneath. And honestly, every little version of you is precious in its own way. I wish I could make you see yourself through my eyes just once, because maybe then you'd understand why I admire you so much. I hope this new year of your life brings you the kind of happiness that doesn't disappear when the day ends, the kind of peace that quiets every unnecessary worry in your mind, and the kind of love that never makes you question whether you're enough. I hope Allah protects your beautiful heart, grants you everything you've silently prayed for, puts barakah in your life, and gives you reasons to smile even on the days when smiling feels difficult. I hope you achieve every dream you're working so hard for, that you get to experience the beautiful things you've always wished for, and that life is gentle with you in all the places where you've had to be strong. And whenever life gets a little too much, I hope you remember that you don't always have to have everything figured out, you don't always have to be strong, and you don't always have to carry everything on your own. You deserve to be cared for just as much as you care for everyone else. If there's one thing I wish for you, it's that you never lose the little things that make you *you*, your madness, your random thoughts, your dramatic "whatever!!", your endless emotions, and that beautiful, unpredictable soul of yours. 🥹🤍 And selfishly, I hope life gives us countless more memories to look back at years from now and laugh about, more stupid fights to make up after, more conversations that accidentally turn into hours, and more moments where we can simply be ourselves without having to explain a single thing. I don't know what the future holds or where life will take either of us, but I do know that having you in my life is something I'll always be grateful for. Some people are special because of what they do for us, but some become special simply because of who they are, and you're so much more than you probably realize. So today, I hope you feel loved, appreciated, celebrated, and reminded of just how much your existence means. 😭🤍 You deserve the world and all the little beautiful things hidden inside it. And if I could give you one gift beyond anything material, it would be the ability to see just how much light you bring into the lives of the people who are lucky enough to know you. Happy Birthday, bell. 🥹🌻❤️
+ </p>
+      <p class="text-right mt-8">
+        Regards<br>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Section 4: Your Favourite Photos of your loved Ones (NEW SECTION) -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Hall of Fame</h2>
+    <div class="relative">
+      <!-- Scroll Buttons -->
+      <button id="scroll-left-btn" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button id="scroll-right-btn" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </button>
+
+      <!-- Scrollable Container -->
+      <div id="hall-of-fame-scroller" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4 -mx-4">
+        <div class="flex snap-x snap-mandatory gap-8">
+          <!--  Card 1 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/image1.jpg" alt="Photo 1" class="w-full h-80 object-cover rounded-md mb-4"> 
+              <h3 class="text-2xl font-anime text-sakura">Photo 1</h3>
+              <p class="mt-2">"Caption 1”"</p>
+            </div>
+          </div>
+          <!--  Card 2 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/image2.jpeg" alt="Photo 2" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Photo 2</h3>
+              <p class="mt-2">"Caption 2"</p>
+            </div>
+          </div>
+          <!--  Card 3 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/image9.jpeg" alt="Photo 3" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Photo 3</h3>
+              <p class="mt-2">"Caption 3"</p>
+            </div>
+          </div>
+          <!--  Card 4 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/image4.png" alt="Photo 4" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Photo 4</h3>
+              <p class="mt-2">"Caption 4"</p>
+            </div>
+          </div>
+          <!--  Card 5 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="500">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/image5.jpg" alt="Photo 5" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Photo 5</h3>
+              <p class="mt-2">"Caption 5"</p>
+            </div>
+          </div>
+          
+          <!-- Card 6 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/image7.jpg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Photo 6</h3>
+              <p class="mt-2">"Caption 6"</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: The Gallery -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">The Y.V.A. Collection</h2>
+    <p class="text-center text-lg -mt-8 mb-12">(Your Very-own Adventures)</p>
+    <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="img/1.png" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/1.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 1">
+      </a>
+      <a href="img/2.png" data-aos="zoom-in" data-aos-delay="100" class="block w-full h-48 md:h-64">
+        <img src="img/2.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 2">
+      </a>
+      <a href="img/3.png" data-aos="zoom-in" data-aos-delay="200" class="block w-full h-48 md:h-64">
+        <img src="img/3.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 3">
+      </a>
+      <a href="img/4.jpg" data-aos="zoom-in" data-aos-delay="300" class="block w-full h-48 md:h-64">
+        <img src="img/4.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 4">
+      </a>
+      <!-- Second Row of Photos -->
+      <a href="img/5.png" data-aos="zoom-in" data-aos-delay="400" class="block w-full h-48 md:h-64">
+        <img src="img/5.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 5">
+      </a>
+      <div data-aos="zoom-in" data-aos-delay="500" class="block w-full h-48 md:h-64">
+  <video src="img/6.mp4" poster="img/6.png" controls playsinline preload="metadata"
+         class="rounded-lg shadow-lg w-full h-full object-cover border-4 border-white">
+  </video>
+</div>
+      <div data-aos="zoom-in" data-aos-delay="500" class="block w-full h-48 md:h-64">
+  <video src="img/7.mp4" poster="img/7.png" controls playsinline preload="metadata"
+         class="rounded-lg shadow-lg w-full h-full object-cover border-4 border-white">
+  </video>
+</div>
+      <div data-aos="zoom-in" data-aos-delay="500" class="block w-full h-48 md:h-64">
+  <video src="img/8.mp4" poster="img/8.png" controls playsinline preload="metadata"
+         class="rounded-lg shadow-lg w-full h-full object-cover border-4 border-white">
+  </video>
+</div>
+      <!-- Third Row of Photos -->
+      <div data-aos="zoom-in" data-aos-delay="500" class="block w-full h-48 md:h-64">
+  <video src="img/9.mp4" poster="img/9.png" controls playsinline preload="metadata"
+         class="rounded-lg shadow-lg w-full h-full object-cover border-4 border-white">
+  </video>
+</div>
+      <div data-aos="zoom-in" data-aos-delay="500" class="block w-full h-48 md:h-64">
+  <video src="img/10.mp4" poster="img/10.png" controls playsinline preload="metadata"
+         class="rounded-lg shadow-lg w-full h-full object-cover border-4 border-white">
+  </video>
+</div>
+      <div data-aos="zoom-in" data-aos-delay="500" class="block w-full h-48 md:h-64">
+  <video src="img/11.mp4" poster="img/11.png" controls playsinline preload="metadata"
+         class="rounded-lg shadow-lg w-full h-full object-cover border-4 border-white">
+  </video>
+</div>
+      
+    </div>
+  </section>
+
+    <!-- Section 6: Finale -->
+    <section class="my-16 md:my-24" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-anime text-center mb-4">Happy Birthday my sweet sweet sohaaaaaaa</h2>
+        <div class="max-w-4xl mx-auto rounded-lg shadow-2xl overflow-hidden bg-navy">
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy text-white p-8 text-center">
+  <p>Enjoy your day to the fullest.</p>
+  <p class="text-sm opacity-70 mt-2"></p>
+</footer>
+
+<!-- These scripts are for the animations and photo gallery -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+
+<!-- Link to your new external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
